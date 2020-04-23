@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: wheat;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(252, 244, 231);
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 200px;
+}
+
+.game-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.items {
+    cursor: pointer;
+}
+
+.items span {
+    margin: 0px 30px;
+}
+.btn{ 
+    cursor: pointer;
+    width: 200px;
+    height: 35px;
+    margin-top: 200px;
+    font-size: 25px;
+    background-color: rgb(16, 180, 112);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
