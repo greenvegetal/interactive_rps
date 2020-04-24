@@ -73,5 +73,18 @@ p.result {
     color: white;
     border: none;
     border-radius: 5px;
-    display:none;
+    display:noe;
+}
+
+.restart {
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+    font-size: 35px;
+    background-color: rgb(16, 180, 112);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    display:noe;
 }

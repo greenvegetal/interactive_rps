@@ -1,6 +1,7 @@
-const rock = document.querySelector('.rock');
+/* const rock = document.querySelector('.rock');
 const paper = document.querySelector('.paper');
-const scissors = document.querySelector('.scissors');
+const scissors = document.querySelector('.scissors'); */
+const buttons = document.querySelectorAll('.items');
 const scoreArea = document.querySelector('.score-area');
 const finish = document.querySelector('.finish');
 
@@ -9,9 +10,13 @@ let computerScore = 0;
 
 
 // computerselection by rng
+function computerChoice() {
+    const items = ["Rock", "Paper" , "Scissors"];
+    let Choice = items[Math.floor(Math.random() * items.length)];
+    return Choice;
+}
+console.log(computerChoice());
 
-const items = ["Rock", "Paper" , "Scissors"];
-let computerChoice = items[Math.floor(Math.random() * items.length)];
 
 
 // These are the functions which updates the dom about the winner 
@@ -61,11 +66,14 @@ function displayFinishBtn() {
 // to the variables rock, paper and scissors
 
 function playGame(e) {
+
+    computerChoice();
+
     if (e.target.textContent === "Rock") {
-        if (computerChoice === "Scissors") {
+        if (computerChoice() === "Scissors") {
             playerScore += 10;
             winHTML();
-        } else if (computerChoice === "Paper") {
+        } else if (computerChoice() === "Paper") {
             computerScore += 10;
             loseHTML();
         } else {
@@ -76,11 +84,11 @@ function playGame(e) {
 
 
     else if (e.target.textContent === "Paper") {
-        if (computerChoice === "Rock") {
+        if (computerChoice() === "Rock") {
             playerScore += 10;
             winHTML();
 
-        } else if (computerChoice === "Scissors") {
+        } else if (computerChoice() === "Scissors") {
             computerScore += 10;
             loseHTML();
 
@@ -92,11 +100,11 @@ function playGame(e) {
 
 
     else if (e.target.textContent === "Scissors") {
-        if (computerChoice === "Paper") {
+        if (computerChoice() === "Paper") {
             playerScore += 10;
             winHTML();
 
-        } else if (computerChoice === "Rock") {
+        } else if (computerChoice() === "Rock") {
             computerScore += 10;
             loseHTML();
 
@@ -133,7 +141,12 @@ function whoWon() {
 
 
 
-rock.addEventListener('click', playGame);
+/* rock.addEventListener('click', playGame);
 paper.addEventListener('click', playGame);
-scissors.addEventListener('click', playGame);
+scissors.addEventListener('click', playGame); */
+
+buttons.forEach(button => {
+    button.addEventListener('click', playGame);
+})
+
 finish.addEventListener('click', whoWon)
