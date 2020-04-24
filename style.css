@@ -51,6 +51,18 @@ h1 {
     margin: 100px 0;
 }
 
+p {
+    text-align: center;
+    font-size: 35px;
+    margin-top: 60px;
+    
+}
+
+p.result {
+    font-weight: bold;
+}
+
+
 .finish{ 
     cursor: pointer;
     width: 250px;
