@@ -63,7 +63,6 @@ p {
     text-align: center;
     font-size: 35px;
     margin-top: 60px;
-    
 }
 
 p.result {
@@ -84,6 +83,7 @@ button {
     border: none;
     border-radius: 5px;
     position: relative;
+    transition: ease-out .5s;
     -webkit-box-shadow: 10px 10px 22px -9px rgba(0,0,0,0.75);
 -moz-box-shadow: 10px 10px 22px -9px rgba(0,0,0,0.75);
 box-shadow: 10px 10px 22px -9px rgba(0,0,0,0.75);
