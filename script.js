@@ -4,13 +4,15 @@ const scissors = document.querySelector('.scissors'); */
 const buttons = document.querySelectorAll('.items');
 const scoreArea = document.querySelector('.score-area');
 const finish = document.querySelector('.finish');
+const restart = document.querySelector('.restart');
 
 let playerScore = 0;
 let computerScore = 0;
 
 
+
 // computerselection by rng
-function computerChoice() {
+let computerChoice = function () {
     const items = ["Rock", "Paper" , "Scissors"];
     let Choice = items[Math.floor(Math.random() * items.length)];
     return Choice;
@@ -121,6 +123,7 @@ displayFinishBtn();
 // attaching event to the finish button to decide the winner
 
 function whoWon() {
+    
     let differenceOne = playerScore - computerScore;
     let differenceTwo = computerScore - playerScore;
 
@@ -137,8 +140,22 @@ function whoWon() {
         <p class="result"> Aww its a tie! Be friends I guess? </p>
         `;
     }
+
+    if (differenceOne > 0 || differenceTwo > 0) {
+        restart.style.display = "block";
+    }
 }
 
+// restarting the game 
+
+function restartGame() {
+    if (whoWon) {
+        playerScore = 0;
+        computerScore = 0;
+
+        scoreArea.innerHTML = "";
+    }
+}
 
 
 /* rock.addEventListener('click', playGame);
@@ -149,4 +166,5 @@ buttons.forEach(button => {
     button.addEventListener('click', playGame);
 })
 
-finish.addEventListener('click', whoWon)
+finish.addEventListener('click', whoWon);
+restart.addEventListener('click', restartGame);
