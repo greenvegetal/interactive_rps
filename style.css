@@ -5,7 +5,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: wheat;
+    background-color: rgb(76, 64, 121);
 }
 
 .container {
@@ -17,7 +17,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(252, 244, 231);
+    background-color: rgb(76, 64, 121);
+    color: white;
 }
 
 h1 {
@@ -77,7 +78,7 @@ button {
     border-radius: 5px;
 }
 .finish{ 
-    background-color: rgb(16, 180, 112);
+    background-color: rgb(236, 70, 78);
     margin-right: 25px;
     display:none;
 }

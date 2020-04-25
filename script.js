@@ -26,8 +26,8 @@ console.log(computerChoice());
 
 const winHTML = function(){
 
-    let HTML = `<p>Congrats! You win!
-            Player Score : ${playerScore} <br>
+    let HTML = `<p>Congrats! You win!🤩 <br>
+            Player Score : ${playerScore} 
             Computer Score : ${computerScore} </p>`;
 
     if(playerScore > 0) {
@@ -36,8 +36,8 @@ const winHTML = function(){
 };
 const loseHTML = function(){
 
-    let HTML = `<p>Uh oh, You lose!
-    Player Score : ${playerScore} <br>
+    let HTML = `<p>Uh oh, You lose!😭 <br>
+    Player Score : ${playerScore} 
     Computer Score : ${computerScore} </p>`;
 
     if(computerScore > 0) {
@@ -47,8 +47,8 @@ const loseHTML = function(){
 
 const tieHTML = function(){
 
-    let HTML = `<p>Err, it's a tie!
-    Player Score : ${playerScore} <br>
+    let HTML = `<p>Err, it's a tie!😱 <br>
+    Player Score : ${playerScore} 
     Computer Score : ${computerScore} </p>`;
 
     if(playerScore) {
@@ -129,15 +129,15 @@ function whoWon() {
 
     if (playerScore > computerScore) {
         scoreArea.innerHTML = `
-        <p class="result"> Congrats! You beat the computer by ${differenceOne} points! </p>
+        <p class="result"> Congrats! You beat the computer by ${differenceOne} points!🥳 </p>
         `;
     } else if (computerScore > playerScore){
         scoreArea.innerHTML = `
-        <p class="result"> Ouch! You are beaten by the computer by ${differenceTwo} points! </p>
+        <p class="result"> Ouch! You have been beaten by the computer by ${differenceTwo} points! Run!🤖 </p>
         `;
     } else {
         scoreArea.innerHTML = `
-        <p class="result"> Aww its a tie! Be friends I guess? </p>
+        <p class="result"> Aww its a tie! Be friends I guess?🤝 </p>
         `;
     }
 
